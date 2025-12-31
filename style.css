@@ -1,10 +1,6 @@
-/* CV Styles for Ahmed Alshaar 
-   Senior UX Designer - B2B & AI 
-*/
-
 :root {
     --primary-black: #1a1a1a;
-    --accent-blue: #0056b3; /* Professional B2B Blue */
+    --accent-blue: #0056b3;
     --text-main: #333333;
     --text-muted: #666666;
     --bg-light: #f8f9fa;
@@ -12,18 +8,32 @@
     --impact-bg: #f0f7ff;
 }
 
-* {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.5;
-    color: var(--text-main);
+    font-family: 'Inter', -apple-system, sans-serif;
     background-color: #e9ecef;
     margin: 0;
-    padding: 40px 20px;
+    padding: 60px 20px;
+}
+
+#download-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transition: transform 0.2s;
+}
+
+#download-btn:hover {
+    transform: translateY(-2px);
+    background-color: #004494;
 }
 
 .cv-container {
@@ -34,7 +44,6 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Header Section [cite: 1-7] */
 header {
     display: flex;
     justify-content: space-between;
@@ -44,166 +53,38 @@ header {
     margin-bottom: 30px;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    letter-spacing: -0.5px;
-    color: var(--primary-black);
-}
+h1 { margin: 0; font-size: 2.2rem; color: var(--primary-black); }
+.tagline { font-size: 1.1rem; color: var(--accent-blue); font-weight: 600; }
+.contact-details { text-align: right; font-size: 0.9rem; color: var(--text-muted); }
+.contact-details a { color: var(--text-main); text-decoration: none; }
 
-.tagline {
-    font-size: 1.1rem;
-    color: var(--accent-blue);
-    font-weight: 600;
-    margin-top: 5px;
-}
+section { margin-bottom: 35px; }
+h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 15px; }
 
-.contact-details {
-    text-align: right;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
+.job-entry { margin-bottom: 25px; }
+.job-header { display: flex; justify-content: space-between; }
+.company-name { font-weight: 700; color: var(--primary-black); }
+.job-date { font-weight: 600; color: var(--text-muted); }
+.job-title { color: var(--accent-blue); font-weight: 600; margin-bottom: 8px; font-size: 0.95rem; }
 
-.contact-details a {
-    color: var(--text-main);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border 0.2s;
-}
+ul { padding-left: 18px; }
+li { margin-bottom: 6px; font-size: 0.95rem; }
 
-.contact-details a:hover {
-    border-bottom: 1px solid var(--accent-blue);
-}
+.impact-section { background-color: var(--impact-bg); padding: 12px 18px; border-radius: 6px; margin-top: 10px; font-size: 0.9rem; }
+.impact-section strong { color: var(--accent-blue); text-transform: uppercase; font-size: 0.75rem; display: block; margin-bottom: 2px; }
 
-/* Typography & Layout */
-section {
-    margin-bottom: 35px;
-}
+.info-grid, .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.skill-category strong { display: block; font-size: 0.9rem; }
+.skill-category span { color: var(--text-muted); font-size: 0.85rem; }
 
-h2 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-}
-
-/* Professional Summary [cite: 8-11] */
-.summary-text {
-    font-size: 1.05rem;
-    color: var(--text-main);
-}
-
-/* Grid for Strengths & Education [cite: 12-15, 54-59] */
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-ul {
-    padding-left: 18px;
-    margin: 0;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* Experience Items [cite: 16-53] */
-.job-entry {
-    margin-bottom: 30px;
-}
-
-.job-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.company-name {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--primary-black);
-}
-
-.job-date {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-muted);
-}
-
-.job-title {
-    font-weight: 600;
-    color: var(--accent-blue);
-    margin-bottom: 10px;
-}
-
-/* Impact Highlight Boxes [cite: 29, 43] */
-.impact-section {
-    background-color: var(--impact-bg);
-    padding: 12px 18px;
-    border-radius: 6px;
-    margin-top: 12px;
-    font-size: 0.95rem;
-}
-
-.impact-section strong {
-    color: var(--accent-blue);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    display: block;
-    margin-bottom: 4px;
-}
-
-/* Tools/Skills Layout [cite: 60-70] */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.skill-category strong {
-    font-size: 0.9rem;
-    color: var(--primary-black);
-}
-
-.skill-category span {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    .contact-details {
-        text-align: left;
-        margin-top: 15px;
-    }
-    .info-grid, .skills-container {
-        grid-template-columns: 1fr;
-    }
-    .cv-container {
-        padding: 25px;
-    }
+    .cv-container { padding: 30px 20px; }
+    header, .job-header, .info-grid, .skills-container { flex-direction: column; grid-template-columns: 1fr; }
+    .contact-details { text-align: left; margin-top: 15px; }
 }
 
-/* Print Optimization */
 @media print {
-    body {
-        background: none;
-        padding: 0;
-    }
-    .cv-container {
-        box-shadow: none;
-        max-width: 100%;
-        padding: 0;
-    }
-    .impact-section {
-        border: 1px solid #d0e3ff;
-    }
+    body { background: none; padding: 0; }
+    #download-btn { display: none; }
+    .cv-container { box-shadow: none; width: 100%; padding: 0; }
 }
